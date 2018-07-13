@@ -9,9 +9,7 @@ data class Deal(
     val startedDate: Date,
     val endDate: Date
 ) {
-
     fun priceCurrency(): String = "$$productPrice"
-
     fun remainingTime(): String {
         val now = Date().time
         val expiredTime = endDate.time
@@ -24,5 +22,5 @@ data class Deal(
         return "$days days $hours hours $minutes minutes $seconds seconds"
     }
 
-    fun isAvailable(): Boolean = endDate.after(Date())
+    fun isAvailable(): Boolean = endDate.time >= Date().time + 1000L
 }
