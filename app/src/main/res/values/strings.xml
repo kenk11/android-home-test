@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Tiki Deals</string>
 
+    <string name="message_buy">Add to cart successfully!</string>
+    <string name="prompt_empty">Sorry, there aren\'t any deals!</string>
     <string name="btn_buy">Buy Now</string>
     <string name="label_ending">Ending in: </string>
 

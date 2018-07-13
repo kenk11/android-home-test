@@ -14,7 +14,7 @@ class DividerDecoration : RecyclerView.ItemDecoration() {
         parent: RecyclerView?,
         state: RecyclerView.State?
     ) {
-        val spacing = 3
+        val spacing = 4
         outRect?.top = spacing
         outRect?.left = spacing
         outRect?.bottom = spacing
