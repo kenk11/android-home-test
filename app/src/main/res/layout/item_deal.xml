@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_item_deal">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imgThumbnail"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="24dp"
+        android:layout_margin="@dimen/padding_big"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,10 +20,12 @@
         android:id="@+id/txtName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_common"
         android:lines="2"
+        android:textColor="@color/nero"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgThumbnail" />
@@ -32,26 +34,42 @@
         android:id="@+id/txtPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/padding_common"
+        android:textColor="@color/valencia"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/txtName"
         app:layout_constraintRight_toRightOf="@id/txtName"
         app:layout_constraintTop_toBottomOf="@id/txtName" />
 
     <TextView
-        android:id="@+id/txtCountDown"
+        android:id="@+id/labelEnding"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/padding_common"
+        android:text="@string/label_ending"
+        android:textColor="@color/nero"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/txtName"
         app:layout_constraintRight_toRightOf="@id/txtName"
         app:layout_constraintTop_toBottomOf="@id/txtPrice" />
+
+    <TextView
+        android:id="@+id/txtCountDown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/txtName"
+        app:layout_constraintRight_toRightOf="@id/txtName"
+        app:layout_constraintTop_toBottomOf="@id/labelEnding" />
 
     <Button
         android:id="@+id/btnBuyNow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="@dimen/padding_common"
+        android:layout_marginTop="@dimen/padding_medium"
         android:background="@color/carmine_pink"
         android:text="@string/btn_buy"
         android:textAllCaps="false"

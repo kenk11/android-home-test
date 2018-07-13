@@ -31,7 +31,7 @@ class DealsAdapter(var deals: List<Deal> = ArrayList()) :
     override fun onBindViewHolder(holder: DealViewHolder, position: Int) {
         val deal = deals[position]
         holder.txtName.text = deal.productName
-        holder.txtPrice.text = deal.productPrice.toString()
+        holder.txtPrice.text = deal.priceCurrency()
         holder.txtCountDown.text = deal.remainingTime()
         ImageLoader.loadImage(holder.itemView.imgThumbnail, deal.productThumbnail)
     }

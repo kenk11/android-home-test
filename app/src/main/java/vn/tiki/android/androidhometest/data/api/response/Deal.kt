@@ -9,6 +9,9 @@ data class Deal(
     val startedDate: Date,
     val endDate: Date
 ) {
+
+    fun priceCurrency(): String = "$$productPrice"
+
     fun remainingTime(): String {
         val now = Date().time
         val expiredTime = endDate.time

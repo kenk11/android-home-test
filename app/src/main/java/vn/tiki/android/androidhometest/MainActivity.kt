@@ -11,6 +11,7 @@ import vn.tiki.android.androidhometest.data.api.response.Deal
 import vn.tiki.android.androidhometest.di.initDependencies
 import vn.tiki.android.androidhometest.di.inject
 import vn.tiki.android.androidhometest.di.releaseDependencies
+import vn.tiki.android.androidhometest.util.DividerDecoration
 
 class MainActivity : AppCompatActivity() {
     val apiServices by inject<ApiServices>()
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = GridLayoutManager(this, 2)
         rvDeals.layoutManager = layoutManager
         rvDeals.adapter = adapter
+        rvDeals.addItemDecoration(DividerDecoration())
     }
 
     override fun onDestroy() {

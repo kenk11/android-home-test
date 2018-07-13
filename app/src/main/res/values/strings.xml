@@ -2,5 +2,6 @@
     <string name="app_name">Tiki Deals</string>
 
     <string name="btn_buy">Buy Now</string>
+    <string name="label_ending">Ending in: </string>
 
 </resources>
