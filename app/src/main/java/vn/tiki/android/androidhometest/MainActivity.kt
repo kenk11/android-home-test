@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), DealsAdapter.DealsCallback {
         rvDeals.itemAnimator = DefaultItemAnimator()
     }
 
-    fun runTimer() {
+    private fun runTimer() {
         val timer = Timer()
         timer.schedule(object : TimerTask() {
             override fun run() {
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), DealsAdapter.DealsCallback {
         }, 0, 1000L)
     }
 
-    fun refreshDeals() {
+    private fun refreshDeals() {
         object : AsyncTask<Unit, Unit, List<Deal>>() {
             override fun onPreExecute() {
                 super.onPreExecute()
@@ -99,7 +99,8 @@ class MainActivity : AppCompatActivity(), DealsAdapter.DealsCallback {
     }
 
     override fun onBuyNow(deal: Deal) {
-        Toast.makeText(this, R.string.message_buy, Toast.LENGTH_SHORT).show()
+        val message = getString(R.string.message_buy, deal.productName)
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {
